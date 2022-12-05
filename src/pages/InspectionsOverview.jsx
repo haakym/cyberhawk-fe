@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
+import InspectionsTable from "../components/InspectionsTable";
 
 class InspectionsOverview extends React.Component {
   state = {
     inspections: [],
-    loadError: false
+    inspectionsloadError: false
   };
 
   getInspections = () => {
@@ -16,7 +17,7 @@ class InspectionsOverview extends React.Component {
       }).catch((error) => {
         console.error(error);
         this.setState({
-          loadError: true
+          inspectionsloadError: true
         });
       });
   };
@@ -28,7 +29,10 @@ class InspectionsOverview extends React.Component {
   render() {
     return (
       <div>
-        
+        <InspectionsTable
+          inspections={this.state.inspections}
+          inspectionsLoadError={this.state.inspectionsLoadError}
+        />
       </div>
     )
   }

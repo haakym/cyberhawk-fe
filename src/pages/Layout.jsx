@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
+      <h1>iHawk</h1>
       <nav>
         <ul>
           <li>

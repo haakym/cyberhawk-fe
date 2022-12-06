@@ -6,6 +6,7 @@ class InspectionsTableRow extends React.Component {
   static propTypes = {
     details: PropTypes.shape({
       id: PropTypes.number,
+      turbine: PropTypes.object,
       date_time: PropTypes.string,
       pilot: PropTypes.object,
       component_gradings_count: PropTypes.number
@@ -13,11 +14,13 @@ class InspectionsTableRow extends React.Component {
   };
 
   render() {
-    const {id, date_time, pilot, component_gradings_count} = this.props.details;
+    const {id, turbine, date_time, pilot, component_gradings_count} = this.props.details;
 
     return (
       <tr>
         <td className="border border-gray-400 px-4 py-2 text-gray-800">{id}</td>
+        <td className="border border-gray-400 px-4 py-2 text-gray-800">{turbine.windfarm.name}</td>
+        <td className="border border-gray-400 px-4 py-2 text-gray-800">{turbine.name}</td>
         <td className="border border-gray-400 px-4 py-2 text-gray-800">{date_time}</td>
         <td className="border border-gray-400 px-4 py-2 text-gray-800">{pilot.name}</td>
         <td className="border border-gray-400 px-4 py-2 text-gray-800">{component_gradings_count}</td>

@@ -29,6 +29,8 @@ class InspectionsTable extends React.Component {
         <thead>
           <tr>
             <th className="border border-gray-400 px-4 py-2 text-gray-800">ID</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">Wind farm</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">Turbine</th>
             <th className="border border-gray-400 px-4 py-2 text-gray-800">Date</th>
             <th className="border border-gray-400 px-4 py-2 text-gray-800">Pilot</th>
             <th className="border border-gray-400 px-4 py-2 text-gray-800">Gradings performed</th>

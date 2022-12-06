@@ -26,6 +26,26 @@ export default function Inspection() {
   }
   
   return (
-    <div>This is inspection {params.inspectionId} for {details.id} </div>
+    <div>
+      <h2 className="text-gray-900 font-bold text-4xl mb-4">
+        Inspection: Turbine {details.turbine.name}
+      </h2>
+      <p>Performed on {details.date_time} by {details.pilot.name}</p>
+      
+      {/*
+        // Display the a map component using the latitude and longitude of the windfarm
+
+        <Map 
+          latitude={details.turbine.windfarm.latitude}  
+          longitude={details.turbine.windfarm.longitude}
+        />
+        
+        // Display the component gradings that were performed on this inspection
+        <ComponentGradingsList />
+        this component would be a simple list of <ComponentGrading /> that would provide information
+        on the Component part and the grading that it received on the inspection that is currently being
+        viewed
+      */}
+    </div>
   )
 }

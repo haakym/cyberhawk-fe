@@ -28,12 +28,13 @@ class InspectionsOverview extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
+        <h2 className="text-gray-900 font-bold text-4xl mb-4">Inspections</h2>
         <InspectionsTable
           inspections={this.state.inspections}
           inspectionsLoadError={this.state.inspectionsLoadError}
         />
-      </div>
+      </>
     )
   }
 }

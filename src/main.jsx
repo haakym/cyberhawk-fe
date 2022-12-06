@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import InspectionsOverview from "./pages/InspectionsOverview";
 import Inspection from "./pages/Inspection";
 import NoPage from "./pages/NoPage";
+import './tailwind.css';
 
 export default function App() {
   return (

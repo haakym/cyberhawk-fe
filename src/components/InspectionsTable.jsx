@@ -25,22 +25,22 @@ class InspectionsTable extends React.Component {
     }
 
     return (
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <td>ID</td>
-              <td>Date</td>
-              <td>View</td>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.keys(inspections).map(key => (
-              <InspectionsTableRow key={key} id={key} details={inspections[key]} />
-              ))}
-          </tbody>
-        </table>
-      </div>
+      <table className="border-collapse border-2 border-gray-500">
+        <thead>
+          <tr>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">ID</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">Date</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">Pilot</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">Gradings performed</th>
+            <th className="border border-gray-400 px-4 py-2 text-gray-800">View</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.keys(inspections).map(key => (
+            <InspectionsTableRow key={key} id={key} details={inspections[key]} />
+            ))}
+        </tbody>
+      </table>
     )
   }
 }

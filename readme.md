@@ -5,6 +5,7 @@
 1. `git clone` this repository.
 2. Run `npm install` in the root directory.
 3. Run `npm run dev` in the root directory to run the web-app.
+4. Copy URL from output and paste into web browser to view, will look something like this: `Local:   http://127.0.0.1:5173/`
 
 Note: the back-end API must be running before the front-end can function correctly.
 
